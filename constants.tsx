@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product, Course, BlogPost, User, UserRole, Order } from './types.ts';
+import { Product, Course, BlogPost, User, UserRole, Order } from './types.js';
 
 // --- UTILITY ---
 export const formatCurrency = (amount: number): string => {

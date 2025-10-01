@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../App.tsx';
-import { UserRole } from '../types.ts';
+import { useAuth } from '../App.js';
+import { UserRole } from '../types.js';
 
 const LoginPage = () => {
     const [isRegistering, setIsRegistering] = useState(false);

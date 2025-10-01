@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { Product } from '../types.ts';
-import { PRODUCTS, formatCurrency } from '../constants.tsx';
-import Card from './common/Card.tsx';
-import Modal from './common/Modal.tsx';
-import { useCart } from '../App.tsx';
+import { Product } from '../types.js';
+import { PRODUCTS, formatCurrency } from '../constants.js';
+import Card from './common/Card.js';
+import Modal from './common/Modal.js';
+import { useCart } from '../App.js';
 
 const ProductDetailModal: React.FC<{ product: Product | null; onClose: () => void }> = ({ product, onClose }) => {
     const { addToCart } = useCart();

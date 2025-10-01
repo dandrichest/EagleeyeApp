@@ -1,6 +1,6 @@
 import React from 'react';
-import { Product, Course, BlogPost } from '../../types.ts';
-import { formatCurrency } from '../../constants.tsx';
+import { Product, Course, BlogPost } from '../../types.js';
+import { formatCurrency } from '../../constants.js';
 
 type Item = Product | Course | BlogPost;
 

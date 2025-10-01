@@ -5,22 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eagles Eye Technology</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Added Babel Standalone for in-browser transpilation of TSX/JSX -->
+    <!-- Babel for in-browser transpilation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.3"
-  }
-}
-</script>
-</head>
+    <!-- ES Module Shims for module loading hooks -->
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.1.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+        "react/": "https://aistudiocdn.com/react@^19.1.1/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.3"
+      }
+    }
+    </script>
+    <!-- Babel fetch hook for es-module-shims -->
+    <script>
+      window.esmsInitOptions = {
+        fetch: async (url, options) => {
+          const res = await fetch(url, options);
+          // Only apply Babel to local scripts, not CDN scripts
+          if (new URL(url).origin !== window.location.origin) {
+            return res;
+          }
+
+          // Transpile local TSX/JSX code
+          const source = await res.text();
+          const babelOptions = {
+            presets: ['react', 'typescript'],
+            // Pass a relative filename for better error messages
+            filename: new URL(url).pathname 
+          };
+          const transformed = Babel.transform(source, babelOptions).code;
+          return new Response(new Blob([transformed], { type: 'application/javascript' }));
+        }
+      };
+    </script>
+  </head>
   <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
     <div id="root"></div>
-    <!-- Changed script type to "text/babel" and added data-type="module" for Babel to process ES modules -->
-    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+    <!-- Load main app module (renamed to .js) -->
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
