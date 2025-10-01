@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Course } from '../types';
-import { COURSES, formatCurrency } from '../constants';
-import Card from './common/Card';
-import Modal from './common/Modal';
-import { useCart } from '../App';
+import { Course } from '../types.ts';
+import { COURSES, formatCurrency } from '../constants.tsx';
+import Card from './common/Card.tsx';
+import Modal from './common/Modal.tsx';
+import { useCart } from '../App.tsx';
 
 const CourseDetailModal: React.FC<{ course: Course | null; onClose: () => void }> = ({ course, onClose }) => {
     const { addToCart } = useCart();

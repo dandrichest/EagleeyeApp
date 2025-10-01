@@ -1,17 +1,17 @@
 import React, { useState, createContext, useContext, useMemo, useCallback, useReducer } from 'react';
 import { HashRouter, Routes, Route, Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
-import { User, UserRole, CartableItem, CartItem } from './types';
-import { USERS as INITIAL_USERS } from './constants';
-import { Layout } from './components/Layout';
-import HomePage from './components/HomePage';
-import StorePage from './components/StorePage';
-import TrainingPage from './components/TrainingPage';
-import BlogPage from './components/BlogPage';
-import LoginPage from './components/LoginPage';
-import AdminLoginPage from './components/AdminLoginPage';
-import DashboardPage from './components/DashboardPage';
-import CheckoutPage, { OrderConfirmationPage } from './components/CheckoutPage';
-import ProfilePage from './components/ProfilePage';
+import { User, UserRole, CartableItem, CartItem } from './types.ts';
+import { USERS as INITIAL_USERS } from './constants.tsx';
+import { Layout } from './components/Layout.tsx';
+import HomePage from './components/HomePage.tsx';
+import StorePage from './components/StorePage.tsx';
+import TrainingPage from './components/TrainingPage.tsx';
+import BlogPage from './components/BlogPage.tsx';
+import LoginPage from './components/LoginPage.tsx';
+import AdminLoginPage from './components/AdminLoginPage.tsx';
+import DashboardPage from './components/DashboardPage.tsx';
+import CheckoutPage, { OrderConfirmationPage } from './components/CheckoutPage.tsx';
+import ProfilePage from './components/ProfilePage.tsx';
 
 // --- AUTH CONTEXT ---
 interface AuthContextType {

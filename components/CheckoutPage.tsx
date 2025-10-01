@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useCart, useAuth } from '../App';
-import { TrashIcon, formatCurrency } from '../constants';
-import Modal from './common/Modal';
+import { useCart, useAuth } from '../App.tsx';
+import { TrashIcon, formatCurrency } from '../constants.tsx';
+import Modal from './common/Modal.tsx';
 
 // --- PAYSTACK MODAL ---
 const PaystackModal: React.FC<{

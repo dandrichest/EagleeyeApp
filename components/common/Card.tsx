@@ -1,6 +1,6 @@
 import React from 'react';
-import { Product, Course, BlogPost } from '../../types';
-import { formatCurrency } from '../../constants';
+import { Product, Course, BlogPost } from '../../types.ts';
+import { formatCurrency } from '../../constants.tsx';
 
 type Item = Product | Course | BlogPost;
 

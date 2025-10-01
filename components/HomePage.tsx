@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheckIcon, SunIcon } from '../constants';
-import { PRODUCTS, formatCurrency } from '../constants';
-import ProductCard from './common/Card';
+import { ShieldCheckIcon, SunIcon } from '../constants.tsx';
+import { PRODUCTS, formatCurrency } from '../constants.tsx';
+import ProductCard from './common/Card.tsx';
 
 const HomePage = () => {
     const services = {

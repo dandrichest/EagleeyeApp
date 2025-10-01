@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { useAuth } from '../App';
-import { useCart } from '../App';
-import { MenuIcon, XIcon, UserCircleIcon, LogoIcon, ShoppingCartIcon } from '../constants';
+import { useAuth } from '../App.tsx';
+import { useCart } from '../App.tsx';
+import { MenuIcon, XIcon, UserCircleIcon, LogoIcon, ShoppingCartIcon } from '../constants.tsx';
 
 const Logo = () => (
     <div className="flex items-center space-x-2">

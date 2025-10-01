@@ -1,9 +1,10 @@
 
+
 import React, { useState } from 'react';
-import { BlogPost } from '../types';
-import { BLOG_POSTS } from '../constants';
-import Card from './common/Card';
-import Modal from './common/Modal';
+import { BlogPost } from '../types.ts';
+import { BLOG_POSTS } from '../constants.tsx';
+import Card from './common/Card.tsx';
+import Modal from './common/Modal.tsx';
 
 const BlogPostModal: React.FC<{ post: BlogPost | null; onClose: () => void }> = ({ post, onClose }) => {
     if (!post) return null;
