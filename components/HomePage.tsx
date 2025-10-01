@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheckIcon, SunIcon } from '../constants.js';
-import { PRODUCTS, formatCurrency } from '../constants.js';
-import ProductCard from './common/Card.js';
+import { ShieldCheckIcon, SunIcon } from '../constants.tsx';
+import { PRODUCTS, formatCurrency } from '../constants.tsx';
+import ProductCard from './common/Card.tsx';
 
 const HomePage = () => {
     const services = {

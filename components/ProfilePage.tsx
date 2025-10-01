@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useAuth } from '../App.js';
-import { ORDER_HISTORY, formatCurrency } from '../constants.js';
-import { UserCircleIcon, PencilIcon } from '../constants.js';
-import Modal from './common/Modal.js';
+import { useAuth } from '../App.tsx';
+import { ORDER_HISTORY, formatCurrency } from '../constants.tsx';
+import { UserCircleIcon, PencilIcon } from '../constants.tsx';
+import Modal from './common/Modal.tsx';
 
 const EditProfileModal: React.FC<{ user: any; onClose: () => void; onSave: (name: string) => void; }> = ({ user, onClose, onSave }) => {
     const [name, setName] = useState(user.name);

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Product, Course, BlogPost, User, UserRole } from '../types.js';
-import { PRODUCTS, COURSES, BLOG_POSTS } from '../constants.js';
-import { PencilIcon, TrashIcon } from '../constants.js';
-import Modal from './common/Modal.js';
-import { useAuth } from '../App.js';
+import { Product, Course, BlogPost, User, UserRole } from '../types.ts';
+import { PRODUCTS, COURSES, BLOG_POSTS } from '../constants.tsx';
+import { PencilIcon, TrashIcon } from '../constants.tsx';
+import Modal from './common/Modal.tsx';
+import { useAuth } from '../App.tsx';
 
 type Tab = 'inventory' | 'courses' | 'blog' | 'users';
 type ManagedItem = Product | Course | BlogPost;

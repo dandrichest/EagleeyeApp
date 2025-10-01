@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { BlogPost } from '../types.js';
-import { BLOG_POSTS } from '../constants.js';
-import Card from './common/Card.js';
-import Modal from './common/Modal.js';
+import { BlogPost } from '../types.ts';
+import { BLOG_POSTS } from '../constants.tsx';
+import Card from './common/Card.tsx';
+import Modal from './common/Modal.tsx';
 
 const BlogPostModal: React.FC<{ post: BlogPost | null; onClose: () => void }> = ({ post, onClose }) => {
     if (!post) return null;
